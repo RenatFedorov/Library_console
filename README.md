@@ -50,4 +50,4 @@ python -m unittest discover -s tests
 - exit - Выйти из программы
 
 ## Дополнительно:
-Реализовано CI/CD при помощи Github Actions
+Реализовано Github Actions
