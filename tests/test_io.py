@@ -10,20 +10,9 @@ class TestConsoleIO(unittest.TestCase):
     def test_proceed_command_add(self, mock_input):
         console_io = ConsoleIO()
         with patch("input_output.io_class.ConsoleIO.clear"):
-            command = console_io.proceed_command()
-            self.assertEqual(command, "add")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "delete")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "find")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "list")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "status")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "help")
-            command = console_io.proceed_command()
-            self.assertEqual(command, "exit")
+            for command in commands:
+                output: str = console_io.proceed_command()
+                self.assertEqual(output, command)
 
     @patch("builtins.input", return_value="Test Title")
     def test_input_title(self, mock_input):

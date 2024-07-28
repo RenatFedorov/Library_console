@@ -15,7 +15,7 @@ class AbstractDatabase(ABC):
         Returns:
             List[Book]: A list of Book instances.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def save_books(self, books: list[Book]) -> None:
@@ -25,7 +25,7 @@ class AbstractDatabase(ABC):
         Args:
             books (List[Book]): A list of Book instances to be saved.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def add_book(self, book: Book) -> None:
@@ -35,7 +35,7 @@ class AbstractDatabase(ABC):
         Args:
             book (Book): The Book instance to be added.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def delete_book(self, book_id: str) -> bool:
@@ -48,7 +48,7 @@ class AbstractDatabase(ABC):
         Returns:
             bool: True if the book was deleted, False if the book was not found.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def find_books(self, query: str, field: str) -> list[Book]:
@@ -62,7 +62,7 @@ class AbstractDatabase(ABC):
         Returns:
             List[Book]: A list of Book instances that match the search criteria.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def change_book_status(self, book_id: str, new_status: str) -> bool:
@@ -76,7 +76,7 @@ class AbstractDatabase(ABC):
         Returns:
             bool: True if the status was changed, False if the book was not found.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def find_book(self, book_id: str) -> Book | None:
@@ -89,4 +89,4 @@ class AbstractDatabase(ABC):
         Returns:
             Book: The book with the matching ID, or None if no such book exists.
         """
-        pass
+        raise NotImplementedError()

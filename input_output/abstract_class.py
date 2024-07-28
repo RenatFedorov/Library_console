@@ -13,14 +13,14 @@ class AbstractIO(ABC):
         """
         Clears the console based on the operating system.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def proceed_command(self) -> str:
         """
         Processes the input commands from the user.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -31,7 +31,7 @@ class AbstractIO(ABC):
         Returns:
             str: The title of the book.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -42,7 +42,7 @@ class AbstractIO(ABC):
         Returns:
             str: The author of the book.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -53,7 +53,7 @@ class AbstractIO(ABC):
         Returns:
             str: The year the book was published.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -64,7 +64,7 @@ class AbstractIO(ABC):
         Returns:
             str: The ID of the book.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -75,7 +75,7 @@ class AbstractIO(ABC):
         Returns:
             str: The status of the book.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -86,7 +86,7 @@ class AbstractIO(ABC):
         Returns:
             str: The search query.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -97,7 +97,7 @@ class AbstractIO(ABC):
         Returns:
             str: The search field.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def input_book(self) -> tuple | None:
@@ -107,7 +107,7 @@ class AbstractIO(ABC):
         Returns:
             tuple | None: The details of the book (title, author, year) or None if input is cancelled.
         """
-        pass
+        raise NotImplementedError()
 
     @abstractmethod
     def output_books(self, books: list[Book]) -> None:
@@ -117,7 +117,7 @@ class AbstractIO(ABC):
         Args:
             books (list[Book]): The list of books to output.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -129,7 +129,7 @@ class AbstractIO(ABC):
             out_message (str): The message to output.
             center (bool): Whether to center the message in the console.
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     @abstractmethod
@@ -144,4 +144,4 @@ class AbstractIO(ABC):
         Returns:
             str: The user's input.
         """
-        pass
+        raise NotImplementedError()
